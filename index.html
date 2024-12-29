@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenant Management Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <header class="bg-blue-600 text-white py-4 px-6 rounded shadow mb-6">
+            <h1 class="text-2xl font-bold">Tenant Management Dashboard</h1>
+            <p class="text-sm">Manage tenant accounts, send messages, and track message read status.</p>
+        </header>
+
+        <main class="space-y-6">
+            <!-- Tenant Registration Section -->
+            <section class="bg-white p-6 rounded shadow">
+                <h2 class="text-lg font-semibold mb-4">Register a New Tenant</h2>
+                <form id="tenantForm" class="space-y-4">
+                    <div>
+                        <label for="tenantName" class="block text-sm font-medium text-gray-700">Tenant Name</label>
+                        <input type="text" id="tenantName" name="tenantName" class="w-full border-gray-300 rounded shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="w-full border-gray-300 rounded shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                        <input type="text" id="address" name="address" class="w-full border-gray-300 rounded shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input type="text" id="phone" name="phone" class="w-full border-gray-300 rounded shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Register Tenant</button>
+                </form>
+            </section>
+
+            <!-- Message Section -->
+            <section class="bg-white p-6 rounded shadow">
+                <h2 class="text-lg font-semibold mb-4">Send Message to Tenants</h2>
+                <form id="messageForm" class="space-y-4">
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full border-gray-300 rounded shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Send Message</button>
+                </form>
+            </section>
+
+            <!-- Read Status Section -->
+            <section class="bg-white p-6 rounded shadow">
+                <h2 class="text-lg font-semibold mb-4">Message Read Status</h2>
+                <table class="table-auto w-full border-collapse text-left text-sm">
+                    <thead>
+                        <tr class="bg-gray-200 text-gray-700">
+                            <th class="border-b px-4 py-2">Tenant Name</th>
+                            <th class="border-b px-4 py-2">Message</th>
+                            <th class="border-b px-4 py-2">Read Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="readStatusTable">
+                        <tr>
+                            <td class="border-b px-4 py-2">John Doe</td>
+                            <td class="border-b px-4 py-2">Welcome to your dashboard!</td>
+                            <td class="border-b px-4 py-2 text-green-600">Read</td>
+                        </tr>
+                    </tbody> 
+              </table>           
+            </section>       
+          </main>   
+        </div>
+
+
+    <script>
+        // Add interactivity here for creating users, sending messages, and updating read statuses.
+        // Use this script section to connect with your backend API to implement multitenancy logic.
+    </script>
+</body>
+</html>
