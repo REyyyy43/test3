@@ -2,10 +2,12 @@
 
 run with 
 npm create vite@latest
-✔ Project name: amplify-js-app
+✔ Project name: test3
 ✔ Select a framework: › Vanilla
 ✔ Select a variant: › TypeScript
 
-cd amplify-js-app
+create a folder and run 
+
+cd test3
 npm install
 npm run dev
